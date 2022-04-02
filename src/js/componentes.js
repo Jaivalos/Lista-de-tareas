@@ -5,6 +5,7 @@ import { Todo } from "../classes/todo.class";
 //Referencias HTML
 const divTodoList = document.querySelector(".todo-list");
 const txtInput = document.querySelector(".new-todo");
+const eliminarCompletado = document.querySelector(".clear-completed");
 
 //Creamos una funcion para añadir el elemento HTML del TO DO
 export const crearTodoHtml = ( todo ) =>{
@@ -65,3 +66,16 @@ divTodoList.addEventListener( "click", ( event ) =>{
     // console.log(todoList);
 
 })
+
+eliminarCompletado.addEventListener( "click", () =>{
+
+    todoList.eliminarCompletados();
+
+    for( let i = divTodoList.children.length - 1; i >= 0; i-- ){
+        const elemento = divTodoList.children[i];
+        if( elemento.classList.contains("completed") ){
+            divTodoList.removeChild( elemento );
+        };
+    }
+
+} )
