@@ -14,9 +14,19 @@ export class TodoList {
 
     eliminarTodo( id ){
 
+        this.todos = this.todos.filter( todo => todo.id != id );
+
     };
 
     marcarCompletado( id ){
+
+        //Recorremos el arreglo viendo si la propiedad completado es 1 ó 0
+        for( const todo of this.todos ){
+            if( todo.id == id ){
+                todo.completado = !todo.completado;
+                break;
+            }
+        }
 
     };
 

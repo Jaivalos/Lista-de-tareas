@@ -10,7 +10,7 @@ import { crearTodoHtml } from './js/componentes';
 export const todoList = new TodoList();
 
 //Creamos elementos Todo
-const tarea1 = new Todo( 'Estudiar Css' );
+// const tarea1 = new Todo( 'Estudiar Css' );
 
 // console.log( todoList );
 // crearTodoHtml( tarea1 );
