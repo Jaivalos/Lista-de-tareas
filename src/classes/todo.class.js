@@ -2,6 +2,15 @@
 //Creamos la clase para el Todo
 export class Todo{
 
+    static fromJSON( {id, tarea, completado, creado} ){
+        const tempTodo = new Todo( tarea );
+        tempTodo.id         = id;
+        tempTodo.completado = completado;
+        tempTodo. creado    = creado;
+        
+        return tempTodo;
+    }
+
     //La descripcion de la nueva tarea
     constructor( tarea ){
         this.tarea = tarea;

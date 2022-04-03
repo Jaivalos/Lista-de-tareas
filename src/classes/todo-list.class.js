@@ -1,3 +1,4 @@
+import { Todo } from "./todo.class";
 
 //Creamos la clase para la lista de todos
 export class TodoList {
@@ -44,11 +45,14 @@ export class TodoList {
     }
 
     cargarLocalStorage(){
+        
         if( localStorage.getItem("todo") ){
             this.todos = JSON.parse( localStorage.getItem("todo") );
         }else{
             this.todos = [];
         }
+
+        this.todos = this.todos.map( obj => Todo.fromJSON( obj ) );
         
     }
 
