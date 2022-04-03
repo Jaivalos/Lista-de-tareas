@@ -9,8 +9,4 @@ import { crearTodoHtml } from './js/componentes';
 //Creacion de elemento TodoList para guardar los todos
 export const todoList = new TodoList();
 
-//Creamos elementos Todo
-// const tarea1 = new Todo( 'Estudiar Css' );
-
-// console.log( todoList );
-// crearTodoHtml( tarea1 );
+todoList.todos.forEach( crearTodoHtml );
